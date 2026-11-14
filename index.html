@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#32163e">
+<meta name="description" content="选择北理工、北信科各自对公安的比分，即可查询清华所有出线打法。">
+<meta property="og:title" content="清华出线查询">
+<meta property="og:description" content="选两场比分，查看清华所有能出线的比分组合。">
+<meta property="og:url" content="https://xzxmath.github.io/thu-qualification/">
+<title>清华出线查询</title>
+<link rel="stylesheet" href="style.css">
+<script defer src="results.js"></script>
+<script defer src="app.js"></script>
+</head>
+<body>
+<header class="hero">
+  <div class="container">
+    <h1>清华出线查询</h1>
+    <p>选两场比分，查看清华所有能出线的打法。</p>
+    <ul class="fixed" aria-label="已知赛果">
+      <li>清华 <strong>0:2</strong> 公安</li>
+      <li>北理工 <strong>2:0</strong> 北信科</li>
+    </ul>
+  </div>
+</header>
+<main class="container">
+  <section class="selections" aria-labelledby="select-heading">
+    <h2 id="select-heading">对手赛果</h2>
+    <form id="scores">
+      <fieldset>
+        <legend>北理工 <span>vs</span> 公安</legend>
+        <div class="options">
+          <label><input type="radio" name="tech" value="20" checked><span>2:0</span></label>
+          <label><input type="radio" name="tech" value="21"><span>2:1</span></label>
+          <label><input type="radio" name="tech" value="12"><span>1:2</span></label>
+          <label><input type="radio" name="tech" value="2"><span>0:2</span></label>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>北信科 <span>vs</span> 公安</legend>
+        <div class="options">
+          <label><input type="radio" name="info" value="20" checked><span>2:0</span></label>
+          <label><input type="radio" name="info" value="21"><span>2:1</span></label>
+          <label><input type="radio" name="info" value="12"><span>1:2</span></label>
+          <label><input type="radio" name="info" value="2"><span>0:2</span></label>
+        </div>
+      </fieldset>
+    </form>
+  </section>
+  <section class="results" aria-labelledby="result-title">
+    <div class="result-head">
+      <h2 id="result-title">清华出线打法</h2>
+      <span class="count" id="count" role="status"></span>
+    </div>
+    <div id="guaranteed"></div>
+    <noscript><p>请在支持 JavaScript 的浏览器中打开查询页。</p></noscript>
+  </section>
+  <footer>小组前两名出线。依次比较胜场、积分和 C 值（胜局数 ÷ 负局数）。</footer>
+</main>
+</body>
+</html>
